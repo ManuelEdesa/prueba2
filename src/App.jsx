@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Lista } from './components/Lista';
+import { Lista } from './componentes/Lista';
 
 export function App() {
   const elementos1 = [
