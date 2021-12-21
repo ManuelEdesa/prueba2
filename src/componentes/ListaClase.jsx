@@ -1,5 +1,5 @@
 import React from 'react';
-//creamos la clase con el constuctor
+//creamos la clase con el constructor
 class ListaClase extends React.Component {
   constructor(props){
     super(props);
