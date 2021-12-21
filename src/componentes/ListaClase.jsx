@@ -1,14 +1,18 @@
-function {
-  const listaInicial = [];
-  if (props.elementos !== undefined) {
-    for (let i = 0; i < props.elementos.length; i++) {
-      listaInicial.push(
-        <ComponenteListaClase
-          done={props.elementos[i].done}
-          texto={props.elementos[i].texto}
-          prioridad={props.elementos[i].prioridad}
-        />
-      );
-    }
+import React from 'react';
+//creamos la clase con el constuctor
+class ListaClase extends React.Component {
+  constructor(props){
+    super(props);
+    this.icono=props.icono;
+    this.titulo=props.titulo;
+  }
+  render(){
+    return (
+      <div>
+        {this.titulo}= {this.icono}
+        </div>
+    );
   }
 }
+//hay que exportar la clase desde aqui para poder importarla en App
+export default ListaClase;
