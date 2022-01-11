@@ -7,6 +7,7 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
   }
+  //para crear menuItems mediante un bucle
 createMenuLinks(){
    const listaComponents = [];
   for (let i=0;i< MenuItems.length; i++){
