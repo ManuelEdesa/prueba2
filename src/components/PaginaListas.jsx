@@ -23,6 +23,11 @@ export function PaginaListas() {
         icono="♥"
         elementos={elementos1}
       />
+       <Lista
+        titulo="Lista de la compra (funciones)"
+        icono="♥"
+        elementos={elementos2}
+      />
       <ListaClase
         titulo="ToDos del curso (clases)"
         icono="🙌"
