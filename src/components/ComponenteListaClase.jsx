@@ -6,7 +6,7 @@ class ComponenteListaClase extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      done: props.done
+      done: props.done,
     };
     this.prioridad = props.prioridad;
     this.texto = props.texto;
@@ -22,24 +22,28 @@ class ComponenteListaClase extends React.Component {
   }
 
   changeStatus() {
-    this.setState({done: !this.state.done});
+    this.setState({ done: !this.state.done });
   }
 
   render() {
     this.setElementClass();
     return (
       <li className={this.claseLista}>
-        <input type="checkbox" defaultChecked={this.state.done} onChange={this.changeStatus.bind(this)} />
+        <input
+          type="checkbox"
+          defaultChecked={this.state.done}
+          onChange={this.changeStatus.bind(this)}
+        />
         {this.texto}
       </li>
     );
   }
 }
-export default ComponenteListaClase;
+
 ComponenteListaClase.defaultProps = {
   prioridad: 'baja',
-  //detemina si el check box se marca automaticamente o no cunado añadimos una tarea
-  done: false
+  done: false,
 };
 
 export default ComponenteListaClase;
+
