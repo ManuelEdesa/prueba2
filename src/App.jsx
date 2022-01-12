@@ -32,10 +32,7 @@ export function App() {
       {/* createRoutes()+funcion flecha*/}
       {MenuItems.map((item)=>{
         return (
-        <Route path={item.path}
-        exact
-        component={item.component}
-        />
+        <Route path={item.path} exact component={item.component}/>
      );
       })}
     </Router>
