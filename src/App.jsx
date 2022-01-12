@@ -31,7 +31,7 @@ export function App() {
       {/* */}
       {MenuItems.map(function createRoutes(item){
         return (
-        <Route path={MenuItems[i].path}
+        <Route path={item.path}
         exact
         component={item.component}/>
      );
