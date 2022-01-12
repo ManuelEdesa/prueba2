@@ -7,6 +7,7 @@ import { Perfil } from './components/Perfil';
 import Header from './components/Header';
 import { MenuItems } from './components/data/MenuItems';
 
+{/* */}
 function createRoutes (){
   //creamos la lista de rutas
 //creamos una variable auxiliar
@@ -28,14 +29,14 @@ export function App() {
     <Router>
       <Header />
       {createRoutes()}
-      {/* */}
-      {MenuItems.map(function createRoutes(item){
+      {/* createRoutes()+funcion flecha*/}
+      {MenuItems.map((item)=>{
         return (
         <Route path={item.path}
         exact
-        component={item.component}/>
+        component={item.component}
+        />
      );
-
       })}
     </Router>
   );
