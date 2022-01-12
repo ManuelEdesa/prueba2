@@ -5,12 +5,22 @@ import { Home } from './components/Home';
 import { PaginaListas } from './components/PaginaListas';
 import { Perfil } from './components/Perfil';
 import Header from './components/Header';
+import { MenuItems } from './components/data/MenuItems';
 
 function createRoutes (){
   //creamos la lista de rutas
 //creamos una variable auxiliar
   const listRoutes=[];
+//creamos el bucle para recorrer las rutas que nos devuelven 
+for (let i=0;i<MenuItems.length; i++){
+listRoutesr.push(
+<Route path={MenuItems[i].path}
+exact
+component={MenuItems[i].component}/>
 
+);
+
+}
 
   
   
@@ -23,9 +33,9 @@ export function App() {
     <Router>
       <Header />
       {createRoutes()}
-      <Route path="/" exact component={Home} />
+      {/*<Route path="/" exact component={Home} />
       <Route path="/listas" component={PaginaListas} />
-      <Route path="/perfil" component={Perfil} />
+  <Route path="/perfil" component={Perfil} />*/}
     </Router>
   );
 }
