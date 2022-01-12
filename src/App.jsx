@@ -13,18 +13,13 @@ function createRoutes (){
   const listRoutes=[];
 //creamos el bucle para recorrer las rutas que nos devuelven 
 for (let i=0;i<MenuItems.length; i++){
-listRoutesr.push(
-<Route path={MenuItems[i].path}
-exact
-component={MenuItems[i].component}/>
-
+listRoutes.push(
+  <Route path={MenuItems[i].path}
+   exact
+   component={MenuItems[i].component}/>
 );
-
-}
-
-  
-  
-  return listRoutes
+} 
+  return listRoutes;
 }
 
 
@@ -33,9 +28,15 @@ export function App() {
     <Router>
       <Header />
       {createRoutes()}
-      {/*<Route path="/" exact component={Home} />
-      <Route path="/listas" component={PaginaListas} />
-  <Route path="/perfil" component={Perfil} />*/}
+      {/* */}
+      {MenuItems.map(function createRoutes(item){
+        return (
+        <Route path={MenuItems[i].path}
+        exact
+        component={item.component}/>
+     );
+
+      })}
     </Router>
   );
 }
