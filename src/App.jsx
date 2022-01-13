@@ -23,17 +23,14 @@ listRoutes.push(
   return listRoutes;
 }
 
-
 export function App() {
   return (
     <Router>
       <Header />
-      {createRoutes()}
-      {/* createRoutes()+funcion flecha*/}
-      {MenuItems.map((item)=>{
+      {MenuItems.map((item) => {
         return (
-        <Route path={item.path} exact component={item.component}/>
-     );
+          <Route key={item.id} path={item.path} exact component={item.component} />
+        );
       })}
     </Router>
   );
