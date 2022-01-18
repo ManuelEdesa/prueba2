@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { MenuItems } from '../data/MenuItems';
+import { MenuItems } from './data/MenuItems';
 
 class BootstrapHeader extends React.Component {
   constructor(props) {

@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Header from './components/Header';
-import BootstrapHeader from './components/BootstrapHeader';
-import { MenuItems } from './data/MenuItems';
+import Header from '/components/Header';
+import BootstrapHeader from '/components/BootstrapHeader';
+import { MenuItems } from '/data/MenuItems';
 
 export function App() {
   return (
