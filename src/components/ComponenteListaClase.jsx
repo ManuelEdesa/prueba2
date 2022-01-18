@@ -46,4 +46,3 @@ ComponenteListaClase.defaultProps = {
 };
 
 export default ComponenteListaClase;
-

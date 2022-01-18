@@ -1,6 +1,6 @@
-import { Home } from '/components/Home';
-import { PaginaListas } from '/components/PaginaListas';
-import { Perfil } from '/components/Perfil';
+import { Home } from './components/Home';
+import { PaginaListas } from './components/PaginaListas';
+import { Perfil } from './components/Perfil';
 
 export const MenuItems = [
   {
