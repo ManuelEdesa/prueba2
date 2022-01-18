@@ -16,17 +16,12 @@ export function PaginaListas() {
   const elementos3 = [{ done: false, texto: 'Estudiar React.js' }];
 
   return (
-    <div>
+    <div className="main-site">
       <h1>Listas de tareas</h1>
       <Lista
         titulo="Tareas de la casa (funciones)"
         icono="♥"
         elementos={elementos1}
-      />
-       <Lista
-        titulo="Lista de la compra (funciones)"
-        icono="♥"
-        elementos={elementos2}
       />
       <ListaClase
         titulo="ToDos del curso (clases)"

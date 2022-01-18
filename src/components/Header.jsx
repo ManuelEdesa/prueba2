@@ -1,42 +1,50 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { MenuItems } from '../data/MenuItems';
+
 import './header.css';
-import { MenuItems } from './data/MenuItems';
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      clicked: false,
+    };
   }
-  //para crear menuItems mediante un bucle
-createMenuLinks(){
-   const listaComponents = [];
-  for (let i=0;i< MenuItems.length; i++){
-     listaComponents.push(
-       <li>
-         <Link to={MenuItems[i].path}>{MenuItems[i].title}</Link>
-         </li>
-     );
+
+  changeClicked() {
+    this.setState({ clicked: !this.state.clicked });
   }
-  return listaComponents
-}
 
   render() {
     return (
-      <nav>
-        <h1>Mi aplicación</h1>
-        <ul>
-          {this.createMenuLinks()}
-
-         
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/listas">Listas de tareas</Link>
-          </li>
-          <li>
-            <Link to="/perfil">Perfil</Link>
-          </li>
+      <nav className="header-navbar">
+        <div className="navbar-logo">
+          <img
+            className="logo-image"
+            src="https://eu01.edcwb.com/buscador/img/centros/logogrande/7348-a9c730d6b2b644f5b9910364ba6af277.jpg"
+          />
+          <i className="fas fa-user-graduate" />
+        </div>
+        <div className="menu-icon" onClick={this.changeClicked.bind(this)}>
+          <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'} />
+        </div>
+        <ul
+          className={this.state.clicked ? 'navbar-menu active' : 'navbar-menu'}
+        >
+          {MenuItems.map((item) => {
+            return (
+              <li key={item.id}>
+                <Link
+                  to={item.path}
+                  className="navbar-link"
+                  onClick={this.changeClicked.bind(this)}
+                >
+                  {item.title}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     );
